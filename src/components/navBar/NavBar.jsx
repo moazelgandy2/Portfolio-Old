@@ -6,7 +6,7 @@ import "../../index.css";
 
 function NavBar() {
   return (
-    <nav className="flex mt-3 justify-between items-center bg-white py-3 px-5 rounded-full min-h-[10vh]">
+    <nav className="flex mt-3 justify-between items-center bg-white py-3 px-5 rounded-full min-h-[10vh] w-[95%] mx-auto">
       <div className="icons flex gap-2">
         <IconCard icon={FaGithub} link="https://github.com/moazelgandy2" />
         <IconCard icon={FaLinkedinIn} link="https://www.linkedin.com/in/moazelgandy2/" />

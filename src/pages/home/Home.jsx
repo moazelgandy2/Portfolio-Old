@@ -2,11 +2,11 @@ import React from "react";
 import { NavBar, FooterCard } from "../../components";
 import { SiAboutdotme, FaRegFileCode, IoMailOutline } from "../../components/icon/icons";
 import "../../index.css";
-
+import { BrowserRouter as Router, useLocation, Route, Link } from "react-router-dom";
+import transition from "../../transition";
 export const Home = () => {
   return (
     <div className="container mx-auto px-2 xs:min-w-[95%] xs:text-center">
-      <NavBar />
       <div className="content my-3 py-3 px-3 xs:h-[75vh] sm:h-[68vh] md:h-[72vh] lg:h-[72vh] bg-white flex justify-evenly items-center flex-col rounded-2xl">
         <h1 className="text-[22px] font-light lg:font-medium md:font-meium sm:font-medium mt-4">
           Hello, I'm Moaz Front-end Developer
@@ -23,9 +23,10 @@ export const Home = () => {
         </button>
       </div>
       <footer className="flex justify-evenly gap-2 flex-wrap xs:flex-nowrap  sm:flex-nowrap	md:flex-nowrap lg:flex-nowrap">
-        <FooterCard icon={SiAboutdotme} text="About me" />
-        <FooterCard icon={FaRegFileCode} text="Projects" />
-        <FooterCard icon={IoMailOutline} text="Contact" />
+        {/* <FooterCard icon={SiAboutdotme} text="About me" /> */}
+        <FooterCard icon={FaRegFileCode} text="Projects" Link="/projects" />
+
+        {/* <FooterCard icon={IoMailOutline} text="Contact" /> */}
       </footer>
 
       <div className="footer flex justify-between items-center gap-8"></div>
@@ -33,4 +34,4 @@ export const Home = () => {
   );
 };
 
-export default Home;
+export default transition(Home);

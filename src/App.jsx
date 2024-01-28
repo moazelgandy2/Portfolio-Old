@@ -1,18 +1,24 @@
 import "./index.css";
 import React, { useState } from "react";
 import { Home } from "./pages/home/Home";
+import { NavBar } from "./components";
 import Projects from "./pages/projects/Projects";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+
+import { AnimatePresence } from "framer-motion";
+
 function App() {
+  const location = useLocation();
   return (
-    <div className="container mx-auto px-2 xs:min-w-[95%] xs:text-center">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
+    <>
+      <NavBar />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route index element={<Home />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
-      </Router>
-    </div>
+      </AnimatePresence>
+    </>
   );
 }
 

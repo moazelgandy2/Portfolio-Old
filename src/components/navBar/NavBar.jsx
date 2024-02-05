@@ -1,6 +1,6 @@
 import logo from "/logo.png";
 import IconCard from "../icon/IconCard";
-import { FaLinkedinIn, FaFacebook, FaGithub } from "../icon/icons";
+import { FaLinkedinIn, FaFacebook, FaGithub } from "../icon/Icons";
 
 import "../../index.css";
 

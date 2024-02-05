@@ -1,8 +1,8 @@
-import { React, createContext } from "react";
+import React from "react";
 
-import { ProjectsImgs, ProjectsTitels } from "../../components/index";
+import { FooterCard, ProjectsImgs, ProjectsTitels } from "../../components/index";
 
-import transition from "../../transition";
+import { FaRegFileCode } from "../../components/icon/Icons";
 
 const projects = [
   {
@@ -44,14 +44,14 @@ const projects = [
 function Projects() {
   return (
     <div className="container mx-auto px-4 max-w-6xl xs:min-w-[95%]">
-      <div className="content my-3 py-3 px-3 bg-white rounded-2xl">
-        <h2 className="text-black font-bold text-[50px] text-center mb-16">Projects</h2>
+      <div className="content my-3 py-3 px-3 bg-white rounded-2xl relative">
         <div className="projects w-full flex items-start gap-20 px-3">
           <ProjectsTitels projects={projects} />
           <ProjectsImgs projects={projects} />
         </div>
       </div>
+      <FooterCard icon={FaRegFileCode} text="Projects" />
     </div>
   );
 }
-export default transition(Projects);
+export default Projects;

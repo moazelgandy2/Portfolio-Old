@@ -4,15 +4,16 @@ import GX1 from "../../../assets/projects/GamingX/GX1.png";
 import GX2 from "../../../assets/projects/GamingX/GX2.png";
 import GX3 from "../../../assets/projects/GamingX/GX3.png";
 import GX4 from "../../../assets/projects/GamingX/GX4.png";
+import GX5 from "../../../assets/projects/GamingX/GX6.png";
 // console.log(ToDoXImg);
-const ProjectImg = ({ gradient, children, id }) => {
+const ProjectImg = ({ children, id, bgImg }) => {
   const inViewProject = useProjectsStore((state) => state.inViewProject);
 
   return (
     <div
       className={classNames(
-        "inset-0 absolute project-img text-center flex items-center justify-center bg-red-300 h-full w-full rounded-2xl bg-gradient-to-br opacity-0",
-        gradient,
+        "inset-0 absolute project-img text-center flex items-center justify-center bg-red-300 h-full w-full rounded-2xl opacity-0 bg-cover",
+        bgImg,
         inViewProject === id ? "opacity-100" : "opacity-0"
       )}
     >
@@ -23,11 +24,10 @@ const ProjectImg = ({ gradient, children, id }) => {
 
 export const Gg = ({ id }) => {
   return (
-    <ProjectImg id={id} gradient="from-[#f7f0ff] to-[#a78afe]">
-      <img src={GX1} alt="" className="w-[20%] rounded-lg absolute top-6 end-8 " />
-      <img src={GX2} alt="" className="w-[20%] rounded-lg absolute start-24" />
-      <img src={GX3} alt="" className="w-[20%] rounded-lg absolute bottom-14 end-24" />
-      <img src={GX4} alt="" className="w-[15%] rounded-3xl absolute bottom-0 -top-1 start-[-1%]" />
+    <ProjectImg id={id} bgImg="bg-GG">
+      <button className=" absolute z-30 bottom-3 end-2 p-2 transition-all ease-linear bg-gradient-to-tl from-[#27273F] cursor-pointer hover:-translate-x-2 hover:-translate-y-1 to-[#38386d] rounded-lg text-white">
+        Show more
+      </button>
     </ProjectImg>
   );
 };

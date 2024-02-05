@@ -3,7 +3,7 @@ import ProjectTitle from "./ProjectTitle";
 
 function ProjectsTitels({ projects }) {
   return (
-    <div className="w-full py-[22vh]">
+    <div className="w-1/4 lg:w-full md:w-full sm:w-full py-[35vh]">
       <ul>
         {projects.map((project) => {
           return (

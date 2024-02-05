@@ -14,13 +14,13 @@ function ProjectTitle({ children, id }) {
 
   useEffect(() => {
     if (isInView) setInViewProject(id);
-    if (!isInView && inViewProject !== id) setInViewProject(null);
-  }, [isInView, id, setInViewProject]);
+    if (!isInView && inViewProject === id) setInViewProject(null);
+  }, [isInView, id, setInViewProject, inViewProject]);
 
   return (
     <p
       ref={ref}
-      className={classNames("text-4xl py-20 font-bold", isInView ? "text-black" : "text-gray-300")}
+      className={classNames("text-2xl py-32 font-bold", isInView ? "text-black" : "text-gray-300")}
     >
       {children}
     </p>

@@ -36,14 +36,14 @@ const projects = [
     card: "Devfolio",
   },
   {
-    id: "Quotes",
-    title: "Quotes-Generator",
-    card: "Quotes",
+    id: "Exclusive",
+    title: "Exclusive",
+    card: "Exclusive",
   },
 ];
 function Projects() {
   return (
-    <div className="container mx-auto px-4 max-w-6xl xs:min-w-[95%]">
+    <div className="container mx-auto px-4 max-w-6xl xs:min-w-[95%] relative">
       <div className="content my-3 py-3 px-3 bg-white rounded-2xl relative">
         <div className="projects w-full flex items-start gap-20 px-3">
           <ProjectsTitels projects={projects} />

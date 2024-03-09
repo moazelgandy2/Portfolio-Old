@@ -2,11 +2,12 @@ import React from "react";
 import { FooterCard } from "../../components";
 import { SiAboutdotme, FaRegFileCode, IoMailOutline } from "../../components/icon/Icons";
 import "../../index.css";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
-    <div className="container mx-auto px-2 xs:min-w-[95%] xs:text-center">
-      <div className="content my-3 py-3 px-3 xs:h-[80vh] sm:h-[68vh] md:h-[72vh] lg:h-[72vh] bg-white flex justify-evenly items-center flex-col rounded-2xl">
+    <div className="container mx-auto px-2 xs:min-w-[95%] min-h-[100v] xs:text-center">
+      <div className="content my-3 py-3 px-3 min-h-[85vh] bg-white flex justify-evenly items-center flex-col rounded-2xl">
         <h1 className="text-[22px] font-light lg:font-medium md:font-meium sm:font-medium mt-4">
           Hello, I'm Moaz Front-end Developer
         </h1>
@@ -21,6 +22,8 @@ export const Home = () => {
           VIEW WORK
         </button>
       </div>
+
+      <Link to={"#works"}>TT</Link>
       <FooterCard icon={SiAboutdotme} text="About" />
 
       <div className="footer flex justify-between items-center gap-8"></div>

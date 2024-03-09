@@ -1,5 +1,5 @@
 import React from "react";
-import { ToDo, Weatherize, BookMarks, Devfolio, Danlies, Gg, Quotes } from "./ProjectImg";
+import { ToDo, Weatherize, BookMarks, Devfolio, Danlies, Gg, Exclusive } from "./ProjectImg";
 
 function ProjectsImgs({ projects }) {
   return (
@@ -13,7 +13,7 @@ function ProjectsImgs({ projects }) {
             BookMarks,
             Devfolio,
             Danlies,
-            Quotes,
+            Exclusive,
           }[project.card];
 
           return <Component id={project.id} key={project.id} />;

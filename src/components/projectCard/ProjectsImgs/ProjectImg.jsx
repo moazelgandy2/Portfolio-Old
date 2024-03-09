@@ -1,11 +1,6 @@
 import classNames from "classnames";
 import { useProjectsStore } from "../Store";
-import GX1 from "../../../assets/projects/GamingX/GX1.png";
-import GX2 from "../../../assets/projects/GamingX/GX2.png";
-import GX3 from "../../../assets/projects/GamingX/GX3.png";
-import GX4 from "../../../assets/projects/GamingX/GX4.png";
-import GX5 from "../../../assets/projects/GamingX/GX6.png";
-// console.log(ToDoXImg);
+
 const ProjectImg = ({ children, id, bgImg }) => {
   const inViewProject = useProjectsStore((state) => state.inViewProject);
 
@@ -64,10 +59,10 @@ export const Devfolio = ({ id }) => {
   );
 };
 
-export const Quotes = ({ id }) => {
+export const Exclusive = ({ id }) => {
   return (
     <ProjectImg id={id} gradient="from-[#f5fbff] to-[#addeff]">
-      Quotes-Generator
+      Exclusive
     </ProjectImg>
   );
 };
